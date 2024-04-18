@@ -3,14 +3,133 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+
+        h1,
+        #btn {
+            text-align: center;
+        }
+        h1 {
+            margin: 20px 0;
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: 5px;
+        }
+        section {
+            margin: 25px 50px;
+        }
+        span input {
+            margin-right: 5px;
+        }
+        button {
+            padding: 5px 20px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px black;
+            background: radial-gradient(white, black);
+            color: black;
+            font-weight: 600;
+        }
+
+        .box {
+            margin-left: 20px;
+            padding: 5px 9px 7px;
+            border-radius: 30px;
+            border: none;
+            box-shadow: 3px -5px 11px black;
+            background-color: #f1f1f1;
+        }
+
+        #genders {
+            width: 500px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #check {
+            margin-top: 50px;
+            margin-left: 6%;
+        }
+        #tos {
+            margin-right: 15px;
+        }
+        #btn {
+            margin: 70px 0 10px;
+        }
+    </style>
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <!-- the entire body must be written by student -->
+    <form action="" method="post">
+        <h1>SignUp Form</h1>
+        <br>
+        <section>
+            <label for="name">Name</label><input class="box" required placeholder="Name" type="text" id="name">
+        </section>
+        <section>
+            <label for="email">Email</label><input class="box" required placeholder="Email" type="email" id="email">
+        </section>
+        <section>
+            Gender
+            <div id="genders">
+                <span>
+                    <input required type="radio" id="gender_m" name="gender" value="Male"><label
+                        for="gender_m">Male</label>
+                </span>
+                <span>
+                    <input type="radio" id="gender_f" name="gender" value="Female"><label for="gender_f">Female</label>
+                </span>
+            </div>
+        </section>
+        <section>
+            <label for="cars">Car Brands</label><select class="box" id="cars" required>
+                <option value="">--Please choose an option--</option>
+                <optgroup label="Luxury brands">
+                    <option value="BMW">BMW</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Mercedes">Mercedes</option>
+                    <option value="Volvo">Volvo</option>
+                    <option value="Land Rover">Land Rover</option>
+                </optgroup>
+                <optgroup label="Consumer brands">
+                    <option value="Toyota">Toyota</option>
+                    <option value="Tata">Tata</option>
+                    <option value="Honda">Honda</option>
+                </optgroup>
+            </select>
+        </section>
+        <section>
+            <label for="age">Age</label><input class="box" required placeholder="Age" type="number" min="1" max="110"
+                id="age">
+        </section>
+        <section>
+            <label for="dob">DOB<input class="box" required type="date" id="dob"></label>
+        </section>
+        <section>
+            <label for="tel">Phone Number<input class="box" placeholder="xxx-xxx-xxxx" type="tel"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="tel"></label>
+        </section>
+        <section>
+            <label for="password">Password<input class="box" required placeholder="Password" type="password"
+                    id="password"></label>
+        </section>
+        <section id="check">
+            <input required type="checkbox" id="tos"><label for="tos">I agree to the TOS</label>
+        </section>
+        <div id="btn">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
 
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 
 </html>
